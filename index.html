@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="src/home.css">
 <body>
     <header class="header">
-        <img src="http://" alt="Logo">
+        <img src="images/Apex_logo.jpeg" alt="Logo">
         <h1>Apex Studio</h1>
-        <img src="http://" alt="Menu" tabindex="1">
+        <img src="images/menu_icon.webp" alt="Menu" tabindex="1" class="menu-icon" id="menuIcon">
+        <div class="dropdown-menu" id="menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="quote.html">Quote</a>
+            <a href="contact.html">Contact</a>
+          </div>
     </header>
     <main>
         <h2>"Capturing Every Angle"</h2>
         <section class="buttons">
-            <button tabindex="2"><h3>Get a Quote</h3></button>
-            <button tabindex="3"><h3>Portfolio</h3></button>
+            <button tabindex="2" id="quoteButton"><h3>Get a Quote</h3></button>
+            <button tabindex="3" id="portfolioButton"><h3>Portfolio</h3></button>
         </section>
         <section>
             <video src="http://" alt="Promotion Video">
@@ -46,12 +53,14 @@
             </blockquote>
         </section>
         <section class="buttons">
-            <button tabindex="4"><h3>Services</h3></button>
-            <button tabindex="5"><h3>Contact</h3></button>
+            <button tabindex="4" id="servicesButton"><h3>Services</h3></button>
+            <button tabindex="5" id="contactButton"><h3>Contact</h3></button>
         </section>
     </main>
     <footer id="footerHome">
         <p>&copy; 2025 Apex Studio. All rights reserved.</p>
-    </footer>    
+    </footer>  
+    <script src="index.js"></script> 
+    <script src="menu.js"></script> 
 </body>
 </html>
