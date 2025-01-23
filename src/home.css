@@ -1,8 +1,11 @@
 @media only screen and (max-width: 430px) {
     body {
+        background-image: url("images/background.jpeg");
+        background-size: cover;
         max-width: 100vw;
         max-height: auto;
-        background-color: rgba(0, 0, 0, 0.883);
+        
+        background-color: rgba(0, 0, 0, 0.885);
     }
     header {
         position: sticky;
