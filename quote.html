@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Studio</title>
+    <link rel="stylesheet" href="src/quote.css">
+<body>
+    <header class="header">
+        <img src="images/Apex_logo.jpeg" alt="Logo">
+        <h1>Apex Studio</h1>
+        <img src="images/menuWhite.svg" alt="Menu" tabindex="1" class="menu-icon" id="menuIcon">
+        <div class="dropdown-menu" id="menu">
+            <a href="index.html"><u>Home</u></a>
+            <a href="services.html"><u>Services</u></a>
+            <a href="portfolio.html"><u>Portfolio</u></a>
+            <a href="quote.html"><u>Quote</u></a>
+            <a href="contact.html"><u>Contact</u></a>
+          </div>
+    </header>
+    <main>
+        <h2>Quote</h2>
+        <form id="quoteInfo">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" tabindex="2" placeholder="Ex. John Smith" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" tabindex="3" placeholder="Ex. blah1234@gmail.com" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" tabindex="4" placeholder="Ex. 404-298-2987" required>
+            <label for="message">Job Description:</label>
+            <label for="budget">Budget:</label>
+            <input type="text" id="budget" name="budget" tabindex="5" placeholder="Enter your budget (Ex. $1000)" required>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" tabindex="6" placeholder="Enter your location (e.g., New York)" required>
+            <textarea id="message" name="message" tabindex="7" placeholder="Ex. Real Estate Photes, 2d/3d mapping, Wedding Photo/Video, Promo Video" required></textarea>
+            <button type="submit" tabindex="8">Submit</button>
+        </form>
+        <section class="buttons">
+            <button tabindex="9" id="servicesButton"><h3>Services</h3></button>
+            <button tabindex="10" id="portfolioButton"><h3>Portfolio</h3></button>
+        </section>
+    </main>
+    <footer id="footerHome">
+        <p>&copy; 2025 Apex Studio. All rights reserved.</p>
+    </footer>  
+    <script src="index.js"></script> 
+    <script src="menu.js"></script>
+</body>
+</html>
