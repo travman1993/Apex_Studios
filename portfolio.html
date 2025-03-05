@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Apex Studio</title>
+    <meta name="description" content="Explore our portfolio of drone photography, video production, web development, and app development projects.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="assets/images/Apex_logo.jpeg" alt="Apex Studio Logo" class="logo">
+            <h1 class="site-title">Apex Studio</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="quote.html">Get a Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Portfolio Hero -->
+        <section class="page-hero">
+            <div class="page-hero-content fade-in">
+                <h1>Our Portfolio</h1>
+                <p>Showcasing our best work across various industries</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section class="portfolio-filter">
+            <div class="container">
+                <div class="filter-buttons fade-in">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="drone">Drone Photography</button>
+                    <button class="filter-btn" data-filter="video">Video Production</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="app">App Development</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery -->
+        <section class="portfolio-gallery">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- Ray's Smoke Shack Website -->
+                    <div class="portfolio-item web fade-in" id="rays-smokeshack">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio/rays-smokeshack-full.png" alt="Ray's Smoke Shack Website">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>Ray's Smoke Shack</h3>
+                                    <p>Website Design & Development</p>
+                                    <a href="https://rayssmokeshack.com/" class="portfolio-view-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SaveHaven App -->
+                    <div class="portfolio-item app fade-in" id="safehaven">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio/safehaven-app-full.png" alt="SaveHaven Mobile App">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>SaveHaven App</h3>
+                                    <p>Mobile Application Development</p>
+                                    <a href="#safehaven-app-modal" class="portfolio-view-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SafeHaven Landing Page -->
+                    <div class="portfolio-item web fade-in">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio/safehaven-landing-full.png" alt="SafeHaven Landing Page">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>SafeHaven Landing Page</h3>
+                                    <p>Website Design & Development</p>
+                                    <a href="https://safehaven.cc/" class="portfolio-view-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Real Estate Drone Photography -->
+                    <div class="portfolio-item drone fade-in">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio/real-estate-drone.jpg" alt="Luxury Home Aerial Photography">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>Luxury Home Showcase</h3>
+                                    <p>Real Estate Drone Photography</p>
+                                    <a href="#realestate-modal" class="portfolio-view-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Promotional Video -->
+                    <div class="portfolio-item video fade-in">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio/promo-video.jpg" alt="Corporate Promotional Video">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>Corporate Brand Video</h3>
+                                    <p>Video Production</p>
+                                    <a href="#promo-modal" class="portfolio-view-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Drone Coverage -->
+                    <div class="portfolio-item drone video fade-in">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio/event-drone.jpg" alt="Festival Aerial Coverage">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>Summer Festival</h3>
+                                    <p>Event Drone Photography & Video</p>
+                                    <a href="#event-modal" class="portfolio-view-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Modals -->
+        <div class="portfolio-modals">
+            <!-- Ray's Smoke Shack Modal -->
+            <div id="rays-modal" class="portfolio-modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>Ray's Smoke Shack</h2>
+                        <p class="modal-category">Website Design & Development</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="modal-image">
+                            <img src="assets/images/portfolio/rays-smokeshack-full.png" alt="Ray's Smoke Shack Website">
+                        </div>
+                        
+                        <div class="modal-description">
+                            <h3>Project Overview</h3>
+                            <p>Ray's Smoke Shack needed a modern, responsive website to showcase their menu, location, and catering services. The goal was to create a mouthwatering online presence that would attract new customers and provide easy access to essential information.</p>
+                            
+                            <h3>Services Provided</h3>
+                            <ul>
+                                <li>Custom website design and development</li>
+                                <li>Mobile-responsive layout</li>
+                                <li>Menu integration with easy updates</li>
+                                <li>Photo gallery of food and location</li>
+                                <li>Online order integration</li>
+                                <li>SEO optimization for local searches</li>
+                            </ul>
+                            
+                            <h3>Results</h3>
+                            <p>Since launching the new website, Ray's Smoke Shack has seen a 45% increase in online orders and a significant boost in catering inquiries. The website effectively showcases their unique BBQ offerings and has become a valuable marketing tool for the business.</p>
+                            
+                            <div class="modal-cta">
+                                <a href="https://rayssmokeshack.com" target="_blank" class="btn">Visit Website</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SaveHaven App Modal -->
+            <div id="safehaven-app-modal" class="portfolio-modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>SaveHaven Mobile App</h2>
+                        <p class="modal-category">Mobile Application Development</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="modal-image">
+                            <img src="assets/images/portfolio/safehaven-app-full.png" alt="SaveHaven Mobile App">
+                        </div>
+                        
+                        <div class="modal-description">
+                            <h3>Project Overview</h3>
+                            <p>SaveHaven is a community safety application designed to help residents connect and communicate during emergencies. The app includes real-time alerts, community messaging, and resource sharing features to enhance neighborhood safety and preparedness.</p>
+                            
+                            <h3>Services Provided</h3>
+                            <ul>
+                                <li>Native iOS and Android app development</li>
+                                <li>User experience design</li>
+                                <li>Real-time notification system</li>
+                                <li>Location-based services integration</li>
+                                <li>Secure messaging platform</li>
+                                <li>Emergency resource database</li>
+                            </ul>
+                            
+                            <h3>Results</h3>
+                            <p>The SaveHaven app has been adopted by over 15,000 users across multiple communities. During recent emergency situations, the app facilitated critical communications and resource sharing, demonstrating its value as an essential community tool.</p>
+                            
+                            <div class="modal-cta">
+                                <a href="#" class="btn">App Store</a>
+                                <a href="#" class="btn">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SafeHaven Landing Page Modal -->
+            <div id="safehaven-landing-modal" class="portfolio-modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>SafeHaven Landing Page</h2>
+                        <p class="modal-category">Website Design & Development</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="modal-image">
+                            <img src="assets/images/portfolio/safehaven-landing-full.png" alt="SafeHaven Landing Page">
+                        </div>
+                        
+                        <div class="modal-description">
+                            <h3>Project Overview</h3>
+                            <p>To complement the SaveHaven mobile app, we created a comprehensive landing page that clearly communicates the app's features, benefits, and value proposition. The site serves as both a marketing tool and an information resource for current and potential users.</p>
+                            
+                            <h3>Services Provided</h3>
+                            <ul>
+                                <li>Conversion-focused landing page design</li>
+                                <li>Feature showcase with animations</li>
+                                <li>Testimonial integration</li>
+                                <li>App download section</li>
+                                <li>FAQ and support resources</li>
+                                <li>Analytics implementation</li>
+                            </ul>
+                            
+                            <h3>Results</h3>
+                            <p>The landing page has achieved a 28% conversion rate for app downloads and has become the primary entry point for new users. It effectively communicates the app's purpose and benefits, resulting in increased user acquisition and engagement.</p>
+                            
+                            <div class="modal-cta">
+                                <a href="https://safehaven.cc" target="_blank" class="btn">Visit Website</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add remaining modals for other portfolio items -->
+        </div>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>Client Testimonials</h2>
+                    <p>What our clients say about our work</p>
+                </div>
+                
+                <div class="testimonial-slider fade-in">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p>"Apex Studio transformed our online presence with a stunning website that perfectly captures our brand. Their attention to detail and customer service exceeded our expectations."</p>
+                            <div class="testimonial-author">
+                                <img src="assets/images/testimonials/client1.jpg" alt="Ray Jacks" class="author-image">
+                                <div class="author-info">
+                                    <h4>Ray Jacks</h4>
+                                    <p>Owner, Ray's Smoke Shack</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p>"The drone photography for our real estate listings has been a game-changer. Properties with Apex Studio aerial images sell 30% faster than those without. Incredible value for our business!"</p>
+                            <div class="testimonial-author">
+                                <img src="assets/images/testimonials/client2.jpg" alt="Sarah Williams" class="author-image">
+                                <div class="author-info">
+                                    <h4>Sarah Williams</h4>
+                                    <p>Real Estate Broker</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p>"Working with Apex Studio on our mobile app was a seamless experience. Their technical expertise and creative vision turned our concept into a user-friendly, powerful tool that our community loves."</p>
+                            <div class="testimonial-author">
+                                <img src="assets/images/testimonials/client3.jpg" alt="Travis Rodriguez" class="author-image">
+                                <div class="author-info">
+                                    <h4>Travis Rodriguez</h4>
+                                    <p>Founder, SaveHaven</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <button class="prev-testimonial" aria-label="Previous testimonial">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="next-testimonial" aria-label="Next testimonial">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item fade-in">
+                        <div class="stat-number" data-count="49">0</div>
+                        <div class="stat-label">Completed Projects</div>
+                    </div>
+                    
+                    <div class="stat-item fade-in delay-100">
+                        <div class="stat-number" data-count="42">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    
+                    <div class="stat-item fade-in delay-200">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    
+                    <div class="stat-item fade-in delay-300">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                        <div class="stat-unit">%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content fade-in">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's discuss how we can help bring your vision to life with our professional services.</p>
+                <div class="cta-buttons">
+                    <a href="quote.html" class="btn cta-primary">Request a Quote</a>
+                    <a href="contact.html" class="btn cta-secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/Apex_logo.jpeg" alt="Apex Studio Logo">
+                    <span>Apex Studio</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="quote.html">Get a Quote</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/BigTravSportsLife/" class="social-link" aria-label="Facebook">
+                        <img src="assets/images/icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/bignattytrav/" class="social-link" aria-label="Instagram">
+                        <img src="assets/images/icons/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/BigTravSports" class="social-link" aria-label="Twitter">
+                        <img src="assets/images/icons/twitter.svg" alt="Twitter">
+                    </a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 Apex Studio. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

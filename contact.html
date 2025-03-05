@@ -3,45 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Studio</title>
-    <link rel="stylesheet" href="src/contact.css">
+    <title>Contact Us - Apex Studio</title>
+    <meta name="description" content="Get in touch with Apex Studio for drone photography, videography, web development, and app development services.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <img src="images/Apex_logo.jpeg" alt="Logo">
-        <h1>Apex Studio</h1>
-        <img src="images/menuWhite.svg" alt="Menu" tabindex="1" class="menu-icon" id="menuIcon">
-        <div class="dropdown-menu" id="menu">
-            <a href="index.html"><u>Home</u></a>
-            <a href="services.html"><u>Services</u></a>
-            <a href="portfolio.html"><u>Portfolio</u></a>
-            <a href="quote.html"><u>Quote</u></a>
-            <a href="contact.html"><u>Contact</u></a>
-          </div>
+        <div class="logo-container">
+            <img src="assets/images/Apex_logo.jpeg" alt="Apex Studio Logo" class="logo">
+            <h1 class="site-title">Apex Studio</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="quote.html">Get a Quote</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </nav>
     </header>
+
     <main>
-        <h2>Contact</h2>
-        <form id="contactInfo">
-            <h3>Travis Rodriguez</h3>
-            <p><b>Email:</b> <a href="mailto:contact@apexstudio.com" tabindex="2">contact@apexstudio.com</a></p>
-            <p><b>Phone:</b> <a href="tel:+14046494655" tabindex="3">(404)-649-4655</a></p>
-            <p><b>Address:</b> <a href="map:123 Main St., Cartersville, GA, 30120" tabindex="4">123 Main St., Cartersville, GA, 30120</a></p>
-            <p><b>Hours:</b> Monday-Friday 9:00 AM - 5:00 PM</p>
-            <p><b>Social Media:</b></p>
-            <div class="socialM">
-                <a href="https://www.facebook.com/BigTravSportsLife/"><img src="images/facebook.svg" alt="Facebook" tabindex="5"></a>
-                <a href="https://www.instagram.com/bignattytrav/"><img src="images/instagram.svg" alt="Instagram" tabindex="6"></a>
-                <a href="https://x.com/BigTravSports"><img src="images/twitter.svg" alt="Twitter" tabindex="7"></a>
+        <!-- Contact Hero -->
+        <section class="page-hero">
+            <div class="page-hero-content fade-in">
+                <h1>Contact Us</h1>
+                <p>Let's create something amazing together</p>
             </div>
-        </form>
-        <section class="buttons">
-            <button tabindex="8" id="servicesButton"><h3>Services</h3></button>
-            <button tabindex="9" id="quoteButton"><h3>Get a Quote</h3></button>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <div class="contact-card">
+                            <div class="contact-header">
+                                <img src="assets/images/team/travis-rodriguez-headshot.jpg" alt="Travis Rodriguez" class="contact-avatar">
+                                <div>
+                                    <h2>Travis Rodriguez</h2>
+                                    <p class="contact-title">Founder & Creative Director</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="contact-label">Email</p>
+                                        <a href="mailto:travisgolembiewski@gmail.com" class="contact-value">contact@apexstudio.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4741 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4018C21.1468 21.5901 20.9046 21.7335 20.6407 21.8228C20.3769 21.912 20.0974 21.9452 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.19 12.85C3.49998 10.2412 2.44824 7.27099 2.12 4.18C2.09501 3.90363 2.12788 3.62446 2.21649 3.36136C2.3051 3.09825 2.44756 2.85666 2.63476 2.65173C2.82196 2.4468 3.0498 2.28319 3.30379 2.17162C3.55777 2.06005 3.83219 2.00264 4.11 2H7.11C7.59524 1.99522 8.06572 2.16708 8.43369 2.48353C8.80166 2.79999 9.04201 3.23945 9.11 3.72C9.23662 4.68007 9.47144 5.62273 9.81 6.53C9.94455 6.88792 9.97366 7.27691 9.89391 7.65088C9.81415 8.02485 9.62886 8.36811 9.36 8.64L8.09 9.91C9.51355 12.4135 11.5865 14.4865 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9752 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0554 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="contact-label">Phone</p>
+                                        <a href="tel:+14046494654" class="contact-value">(404) 649-4655</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="contact-label">Address</p>
+                                        <address class="contact-value">123 Main St.<br>Cartersville, GA 30120</address>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="contact-label">Business Hours</p>
+                                        <p class="contact-value">Monday-Friday: 9:00 AM - 5:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="social-media">
+                                <h3>Connect With Us</h3>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/BigTravSportsLife/" class="social-link" target="_blank" aria-label="Facebook">
+                                        <img src="assets/images/icons/facebook.svg" alt="Facebook">
+                                    </a>
+                                    <a href="https://www.instagram.com/bignattytrav/" class="social-link" target="_blank" aria-label="Instagram">
+                                        <img src="assets/images/icons/instagram.svg" alt="Instagram">
+                                    </a>
+                                    <a href="https://x.com/BigTravSports" class="social-link" target="_blank" aria-label="Twitter">
+                                        <img src="assets/images/icons/twitter.svg" alt="Twitter">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container fade-in delay-100">
+                        <form id="contactForm" class="contact-form">
+                            <h2>Send Us a Message</h2>
+                            
+                            <div class="form-group">
+                                <label for="contactName">Full Name</label>
+                                <input type="text" id="contactName" name="contactName" placeholder="Your full name" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" placeholder="your@email.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone Number</label>
+                                    <input type="tel" id="contactPhone" name="contactPhone" placeholder="(123) 456-7890">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <input type="text" id="contactSubject" name="contactSubject" placeholder="What is this regarding?" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" name="contactMessage" rows="5" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>Find Us</h2>
+                    <p>Our office is located in the heart of Cartersville, GA</p>
+                </div>
+                
+                <div class="map-container fade-in">
+                    <!-- Replace with an actual map iframe in production -->
+                    <div class="map-placeholder">
+                        <img src="assets/images/map.png" alt="Map of Apex Studio location" class="map-image">
+                        <a href="https://www.google.com/maps/place/Cartersville,+GA/@34.1879973,-84.9663173,11z/data=!3m1!4b1!4m6!3m5!1s0x88f54f0e426f446f:0x90e7566a8c57a34e!8m2!3d34.1650972!4d-84.7999382!16zL20vMHJ0NDU?entry=ttu&g_ep=EgoyMDI1MDMwMi4wIKXMDSoASAFQAw%3D%3D" class="map-link" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content fade-in">
+                <h2>Looking for a Quote Instead?</h2>
+                <p>If you have a specific project in mind, get a detailed quote tailored to your needs.</p>
+                <div class="cta-buttons">
+                    <a href="quote.html" class="btn cta-primary">Request a Quote</a>
+                    <a href="portfolio.html" class="btn cta-secondary">View Our Work</a>
+                </div>
+            </div>
         </section>
     </main>
-    <footer id="footerHome">
-        <p>&copy; 2025 Apex Studio. All rights reserved.</p>
-    </footer>  
-    <script src="index.js"></script> 
-    <script src="menu.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/Apex_logo.jpeg" alt="Apex Studio Logo">
+                    <span>Apex Studio</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="quote.html">Get a Quote</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/BigTravSportsLife/" class="social-link" aria-label="Facebook">
+                        <img src="assets/images/icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/bignattytrav/" class="social-link" aria-label="Instagram">
+                        <img src="assets/images/icons/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/BigTravSports" class="social-link" aria-label="Twitter">
+                        <img src="assets/images/icons/twitter.svg" alt="Twitter">
+                    </a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 Apex Studio. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

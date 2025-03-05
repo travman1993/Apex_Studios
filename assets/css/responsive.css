@@ -1,0 +1,468 @@
+/**
+ * Apex Studio - Responsive Media Queries
+ * Adjusts layouts and components for different screen sizes
+ */
+
+/* ===== Small Mobile Devices (up to 480px) ===== */
+@media (max-width: 480px) {
+    :root {
+      /* Adjusted font sizes for mobile */
+      --font-3xl: 2rem;
+      --font-2xl: 1.75rem;
+      --font-xl: 1.25rem;
+    }
+  
+    /* Layout Adjustments */
+    .container {
+      padding-left: var(--spacing-sm);
+      padding-right: var(--spacing-sm);
+    }
+    
+    section {
+      padding: var(--spacing-md) 0;
+    }
+  
+    /* Header & Navigation */
+    .header {
+      padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .site-title {
+      font-size: var(--font-lg);
+    }
+    
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--dark-overlay);
+      padding: var(--spacing-sm);
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-sm);
+      z-index: var(--z-high);
+    }
+    
+    .nav-links.show {
+      display: flex;
+    }
+    
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Hero Section */
+    .hero {
+      padding-top: 60px;
+      min-height: 90vh;
+    }
+    
+    .hero-content {
+      padding: var(--spacing-sm);
+    }
+    
+    .hero h1 {
+      font-size: var(--font-3xl);
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      width: 100%;
+      gap: var(--spacing-xs);
+    }
+    
+    .cta-buttons .btn {
+      width: 100%;
+    }
+  
+    /* Services Section */
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+    
+    .service-card img {
+      height: 180px;
+    }
+  
+    /* About Section */
+    .about {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+    
+    .about-image {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+    
+    .about-content {
+      text-align: center;
+    }
+    
+    .stats-container {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+  
+    /* Portfolio Section */
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .portfolio-item {
+      height: 250px;
+    }
+    
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--spacing-xs);
+    }
+    
+    .filter-btn {
+      font-size: var(--font-xs);
+      padding: var(--spacing-xxs) var(--spacing-xs);
+    }
+  
+    /* Contact Section */
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+      padding: var(--spacing-sm);
+    }
+  
+    /* Footer */
+    .footer-links {
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    
+    .modal-body {
+      flex-direction: column;
+    }
+    
+    .modal-image,
+    .modal-description {
+      width: 100%;
+    }
+    
+    /* Quote Page */
+    .quote-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .quote-form {
+      padding: var(--spacing-sm);
+    }
+    
+    .form-row {
+      flex-direction: column;
+    }
+    
+    /* Process Section */
+    .process-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ===== Medium Mobile Devices (481px to 640px) ===== */
+  @media (min-width: 481px) and (max-width: 640px) {
+    :root {
+      /* Slightly larger font sizes than smallest mobile */
+      --font-3xl: 2.25rem;
+      --font-2xl: 1.875rem;
+    }
+  
+    /* Layout Adjustments */
+    .container {
+      padding-left: var(--spacing-sm);
+      padding-right: var(--spacing-sm);
+    }
+    
+    /* Header & Navigation */
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--dark-overlay);
+      padding: var(--spacing-sm);
+      flex-direction: column;
+      align-items: center;
+      z-index: var(--z-high);
+    }
+    
+    .nav-links.show {
+      display: flex;
+    }
+    
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Hero Section */
+    .cta-buttons {
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    /* Services Grid */
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    /* About Section */
+    .about {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .about-image {
+      margin: 0 auto;
+      max-width: 350px;
+    }
+  
+    /* Portfolio Grid */
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Contact Section */
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+  
+    /* Footer */
+    .footer-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    /* Modal Content */
+    .modal-body {
+      flex-direction: column;
+    }
+    
+    .modal-image,
+    .modal-description {
+      width: 100%;
+    }
+    
+    /* Quote Page */
+    .quote-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ===== Tablet Devices (641px to 768px) ===== */
+  @media (min-width: 641px) and (max-width: 768px) {
+    /* Header & Navigation */
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 250px;
+      background: var(--dark-overlay);
+      padding: var(--spacing-sm);
+      flex-direction: column;
+      align-items: center;
+      z-index: var(--z-high);
+    }
+    
+    .nav-links.show {
+      display: flex;
+    }
+    
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Services Grid */
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* About Section */
+    .about {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  
+    /* Portfolio Grid */
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* Process Steps */
+    .process-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact Section */
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+    
+    /* Quote Page */
+    .quote-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ===== Small Desktop Devices (769px to 1024px) ===== */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Services Grid */
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* About Section */
+    .about {
+      gap: var(--spacing-md);
+    }
+  
+    /* Portfolio Grid */
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* Contact Section */
+    .contact-grid {
+      gap: var(--spacing-md);
+    }
+    
+    /* Process Steps */
+    .process-steps {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Quote Page */
+    .quote-info {
+      padding-right: var(--spacing-md);
+    }
+  }
+  
+  /* ===== Large Desktop Devices (1025px to 1280px) ===== */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    /* No major adjustments needed, standard desktop layout applies */
+    .container {
+      max-width: var(--container-lg);
+      margin: 0 auto;
+    }
+  }
+  
+  /* ===== Extra Large Desktop Devices (1281px and above) ===== */
+  @media (min-width: 1281px) {
+    .container {
+      max-width: var(--container-xl);
+      margin: 0 auto;
+    }
+    
+    /* Larger font sizes for larger screens */
+    :root {
+      --font-4xl: 3.5rem;
+      --font-5xl: 4.5rem;
+    }
+    
+    /* Expand sections with more padding */
+    section {
+      padding: var(--spacing-xl) 0;
+    }
+    
+    /* Hero Section */
+    .hero-content {
+      max-width: 1000px;
+    }
+    
+    /* Portfolio Grid - 3 columns for large screens */
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* ===== Print Styles ===== */
+  @media print {
+    /* Remove background colors and images for better printing */
+    body {
+      background-color: white;
+      color: black;
+      background-image: none;
+    }
+    
+    .header,
+    .footer,
+    .cta-section,
+    .nav-links,
+    .menu-toggle,
+    button:not([type="submit"]) {
+      display: none;
+    }
+    
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Ensure content is visible */
+    .service-card,
+    .portfolio-item,
+    .about-content,
+    .testimonial {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      color: black;
+      background-color: white;
+      border: 1px solid #eee;
+    }
+    
+    /* Add page URL to the bottom of the page */
+    @page {
+      margin: 2cm;
+    }
+    
+    body::after {
+      content: "Printed from: " attr(data-url);
+      display: block;
+      text-align: center;
+      font-size: 10pt;
+      margin-top: 2cm;
+    }
+  }

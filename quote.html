@@ -3,47 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Studio</title>
-    <link rel="stylesheet" href="src/quote.css">
+    <title>Request a Quote - Apex Studio</title>
+    <meta name="description" content="Get a customized quote for drone photography, videography, web development, and app development services tailored to your business needs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <img src="images/Apex_logo.jpeg" alt="Logo">
-        <h1>Apex Studio</h1>
-        <img src="images/menuWhite.svg" alt="Menu" tabindex="1" class="menu-icon" id="menuIcon">
-        <div class="dropdown-menu" id="menu">
-            <a href="index.html"><u>Home</u></a>
-            <a href="services.html"><u>Services</u></a>
-            <a href="portfolio.html"><u>Portfolio</u></a>
-            <a href="quote.html"><u>Quote</u></a>
-            <a href="contact.html"><u>Contact</u></a>
-          </div>
+        <div class="logo-container">
+            <img src="assets/images/Apex_logo.jpeg" alt="Apex Studio Logo" class="logo">
+            <h1 class="site-title">Apex Studio</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="quote.html" class="active">Get a Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </nav>
     </header>
+
     <main>
-        <h2>Quote</h2>
-        <form id="quoteInfo">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" tabindex="2" placeholder="Ex. John Smith" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" tabindex="3" placeholder="Ex. blah1234@gmail.com" required>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" tabindex="4" placeholder="Ex. 404-298-2987" required>
-            <label for="message">Job Description:</label>
-            <label for="budget">Budget:</label>
-            <input type="text" id="budget" name="budget" tabindex="5" placeholder="Enter your budget (Ex. $1000)" required>
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" tabindex="6" placeholder="Enter your location (e.g., New York)" required>
-            <textarea id="message" name="message" tabindex="7" placeholder="Ex. Real Estate Photes, 2d/3d mapping, Wedding Photo/Video, Promo Video" required></textarea>
-            <button type="submit" tabindex="8">Submit</button>
-        </form>
-        <section class="buttons">
-            <button tabindex="9" id="servicesButton"><h3>Services</h3></button>
-            <button tabindex="10" id="portfolioButton"><h3>Portfolio</h3></button>
+        <!-- Quote Page Hero -->
+        <section class="page-hero">
+            <div class="page-hero-content fade-in">
+                <h1>Get a Customized Quote</h1>
+                <p>Tell us about your project and we'll create a tailored solution that fits your needs and budget</p>
+            </div>
+        </section>
+
+        <!-- Quote Form Section -->
+        <section class="quote-section">
+            <div class="container">
+                <div class="quote-grid">
+                    <div class="quote-info fade-in">
+                        <h2>Why Request a Quote?</h2>
+                        <ul class="benefits-list">
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <div class="benefit-content">
+                                    <h3>Detailed Proposal</h3>
+                                    <p>Receive a comprehensive breakdown of services, timeline, and deliverables.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <div class="benefit-content">
+                                    <h3>No Obligation</h3>
+                                    <p>Request a quote with no commitment required - you decide if and when to proceed.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="testimonial-mini">
+                            <p>"Apex Studio provided a detailed quote that perfectly matched my needs. Their transparent pricing made my decision easy."</p>
+                            <span class="testimonial-author">— Mark Wilson, Business Owner</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-form-container fade-in delay-100">
+                        <form id="quoteForm" class="quote-form">
+                            <h2>Project Details</h2>
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="companyName">Company Name (if applicable)</label>
+                                <input type="text" id="companyName" name="companyName" placeholder="Your company name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="serviceType">Service Type</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="drone-photography">Drone Photography</option>
+                                    <option value="video-production">Video Production</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="app-development">App Development</option>
+                                    <option value="multiple">Multiple Services</option>
+                                    <option value="other">Other (Please specify)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget</label>
+                                <select id="budget" name="budget" required>
+                                    <option value="" disabled selected>Select a budget range</option>
+                                    <option value="under-500">Under $500</option>
+                                    <option value="500-1000">$500 - $1,000</option>
+                                    <option value="1000-2500">$1,000 - $2,500</option>
+                                    <option value="2500-5000">$2,500 - $5,000</option>
+                                    <option value="5000-10000">$5,000 - $10,000</option>
+                                    <option value="over-10000">Over $10,000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Project Location</label>
+                                <input type="text" id="location" name="location" placeholder="City, State" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline">Desired Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="" disabled selected>Select a timeline</option>
+                                    <option value="urgent">Urgent (ASAP)</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="1-3-months">1-3 months</option>
+                                    <option value="3-6-months">3-6 months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="projectDetails">Project Details</label>
+                                <textarea id="projectDetails" name="projectDetails" rows="5" placeholder="Please describe your project in detail, including specific requirements and goals..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="referralSource">How did you hear about us?</label>
+                                <select id="referralSource" name="referralSource">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="search">Search Engine</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="referral">Referral from a friend/colleague</option>
+                                    <option value="advertisement">Advertisement</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Submit Quote Request</button>
+                            
+                            <p class="form-disclaimer">By submitting this form, you agree to be contacted regarding your quote request. We respect your privacy and will never share your information with third parties.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>What Happens Next?</h2>
+                    <p>After you submit your quote request, here's what you can expect:</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="process-step fade-in">
+                        <div class="step-number">1</div>
+                        <h3>Initial Review</h3>
+                        <p>We'll review your request within 24 hours and may reach out for additional details if needed.</p>
+                    </div>
+                    
+                    <div class="process-step fade-in delay-100">
+                        <div class="step-number">2</div>
+                        <h3>Custom Quote</h3>
+                        <p>Our team will prepare a detailed quote based on your specific requirements and budget.</p>
+                    </div>
+                    
+                    <div class="process-step fade-in delay-200">
+                        <div class="step-number">3</div>
+                        <h3>Consultation</h3>
+                        <p>We'll schedule a call or meeting to discuss the quote and answer any questions you may have.</p>
+                    </div>
+                    
+                    <div class="process-step fade-in delay-300">
+                        <div class="step-number">4</div>
+                        <h3>Project Kickoff</h3>
+                        <p>Once you approve the quote, we'll finalize the agreement and begin working on your project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>Quote Request FAQs</h2>
+                    <p>Common questions about our quote process</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item fade-in">
+                        <div class="faq-question">
+                            <h3>How soon will I receive my quote?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We typically provide quotes within 1-2 business days for standard projects. More complex projects may take 3-5 business days as we carefully analyze your requirements to provide the most accurate quote possible.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-in delay-100">
+                        <div class="faq-question">
+                            <h3>Is there a fee for requesting a quote?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, our quote process is completely free and comes with no obligation. We believe in transparency and want to provide you with all the information you need to make an informed decision.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-in delay-200">
+                        <div class="faq-question">
+                            <h3>What if I don't know my exact budget?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>That's completely fine! Select the range that you're most comfortable with, or choose "Flexible" in the budget field. We can work with you to scale the project based on your available resources and prioritize features accordingly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-in delay-300">
+                        <div class="faq-question">
+                            <h3>Can you provide examples of similar projects?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! After reviewing your quote request, we can share relevant examples from our portfolio that align with your project goals. You can also check our portfolio page for a selection of our previous work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content fade-in">
+                <h2>Not Ready for a Quote Yet?</h2>
+                <p>Feel free to contact us with any questions or schedule a free initial consultation to discuss your needs.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn cta-primary">Contact Us</a>
+                    <a href="portfolio.html" class="btn cta-secondary">View Our Work</a>
+                </div>
+            </div>
         </section>
     </main>
-    <footer id="footerHome">
-        <p>&copy; 2025 Apex Studio. All rights reserved.</p>
-    </footer>  
-    <script src="index.js"></script> 
-    <script src="menu.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/Apex_logo.jpeg" alt="Apex Studio Logo">
+                    <span>Apex Studio</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="quote.html">Get a Quote</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/BigTravSportsLife/" class="social-link" aria-label="Facebook">
+                        <img src="assets/images/icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/bignattytrav/" class="social-link" aria-label="Instagram">
+                        <img src="assets/images/icons/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/BigTravSports" class="social-link" aria-label="Twitter">
+                        <img src="assets/images/icons/twitter.svg" alt="Twitter">
+                    </a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 Apex Studio. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
+</html><h3>Customized Solutions</h3>
+                                    <p>Get pricing specific to your project needs, not generic packages.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <div class="benefit-content">
+                                    <h3>Budget-Friendly Options</h3>
+                                    <p>We work with businesses of all sizes and can adapt to your budget constraints.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <div class="benefit-content">
